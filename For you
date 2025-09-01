@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Do you love me?</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #ffe4ec;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    h1 { font-size: 2.5rem; color: #d6336c; }
+    p { font-size: 1.2rem; color: #555; }
+    button {
+      margin: 8px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    #yes { background: #ff6b6b; color: white; }
+    #no { background: #ddd; color: #333; position: relative; }
+  </style>
+</head>
+<body>
+  <h1>Do you love me?</h1>
+  <p>I am all yours 💖</p>
+  <div>
+    <button id="yes">Yes</button>
+    <button id="no">No</button>
+  </div>
+  <script>
+    const yes = document.getElementById("yes");
+    const no = document.getElementById("no");
+    yes.onclick = () => alert("Yay! You said Yes 😍");
+    no.onmouseover = () => {
+      no.style.top = (Math.random() * 40 - 20) + "px";
+      no.style.left = (Math.random() * 40 - 20) + "px";
+    };
+  </script>
+</body>
+</html>
